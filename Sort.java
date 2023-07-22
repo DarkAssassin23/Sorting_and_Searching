@@ -223,4 +223,99 @@ public class Sort
 		if(l<high)
 			sortArrayListQuick(l,high,n);
 	}
+
+	/**
+	 * Takes in an ArrayList and returns if it is sorted or not
+	 * @param n The ArrayList to check whether or not it is sorted
+	 * @return If the ArrayList is sorted
+	 */
+	private boolean isSortedArrayList(ArrayList<Integer> n)
+	{
+		int i = 0;
+		while(i < n.size()-1)
+		{
+			if(n.get(i) > n.get(i+1))
+				return false;
+			i++;
+		}
+		return true;
+	}
+
+	/**
+	 * Takes in an array and returns if it is sorted or not
+	 * @param n The array to check whether or not it is sorted
+	 * @return If the array is sorted
+	 */
+	private boolean isSortedArray(int[] n)
+	{
+		int i = 0;
+		while(i < n.length-1)
+		{
+			if(n[i] > n[i+1])
+				return false;
+			i++;
+		}
+		return true;
+	}
+
+	/**
+	 * Takes in an ArrayList and randomly swaps it
+	 * @param n The ArrayList to randomly swap the elements of
+	 */
+	private void swapArrayListElements(ArrayList<Integer> n)
+	{
+		int i = 0;
+		while(i < n.size())
+		{
+			int temp = n.get(i);
+			int randElem = (int)(Math.random()*n.size());
+			n.set(i, n.get(randElem));
+			n.set(randElem, temp);
+			i++;
+		}
+	}
+
+	/**
+	 * Takes in an array and randomly swaps it
+	 * @param n The array to randomly swap the elements of
+	 */
+	private void swapArrayElements(int[] n)
+	{
+		int i = 0;
+		while(i < n.length)
+		{
+			int temp = n[i];
+			int randElem = (int)(Math.random()*n.length);
+			n[i] = n[randElem];
+			n[randElem] = temp;
+			i++;
+		}
+	}
+
+	/**
+	 * Takes in an ArrayList and uses a bogo sort to sort it from least to greatest
+	 * @param n The ArrayList that is being sorted
+	 */
+	public void bogoSortArrayList(ArrayList<Integer> n)
+	{
+		while(!isSortedArrayList(n))
+			swapArrayListElements(n);
+
+		for(int x : n)
+			System.out.println(x);
+
+	}
+
+	/**
+	 * Takes in an array and uses a bogo sort to sort it from least to greatest
+	 * @param n The array that is being sorted
+	 */
+	public void bogoSortArray(int[] n)
+	{
+		while(!isSortedArray(n))
+			swapArrayElements(n);
+
+		for(int x : n)
+			System.out.println(x);
+	}
 }

@@ -12,6 +12,7 @@ This contains the following sorting algorithms:
 - Selection Sort
 - Insertion Sort
 - Quick Sort
+- Bogo Sort
 
 Searching Algorithms
 ------------

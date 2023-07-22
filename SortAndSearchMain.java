@@ -51,6 +51,9 @@ public class SortAndSearchMain
 		sort.quickSortArray(arrayNums);
 		System.out.println();
 		sort.quickSortArrayList(arrayListNums);
+
+		//sort.bogoSortArray(arrayNums);
+		//sort.bogoSortArrayList(arrayListNums);
 		
 		//search.linearSearchArray(arrayNums, searchValueArray);
 		//search.linearSearchArrayList(arrayListNums, searchValueArrayList);
