@@ -58,7 +58,7 @@ public class Search
 		int high = n.length-1;
 		while(high>=low)
 		{
-			int middle = (low+high)/2;
+			int middle = low + ((high-low)/2);
 			if(n[middle]==key)
 			{
 				System.out.println("Number: "+key+ " found at position "+(middle+1)+" out of "+n.length);
@@ -86,7 +86,7 @@ public class Search
 		int high = n.size()-1;
 		while(high>=low)
 		{
-			int middle = (low+high)/2;
+			int middle = low + ((high-low)/2);
 			if(n.get(middle)==key)
 			{
 				System.out.println("Number: "+key+ " found at position "+(middle+1)+" out of "+n.size());
